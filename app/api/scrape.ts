@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';

@@ -1,1 +1,430 @@
-{}
+{
+  "Sagosa": [
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "cemento pcr normal cpc 40 25 kg.",
+      "price": "$ 5.345,78",
+      "discount": "-3%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "base pallet cemento",
+      "price": "$ 21.527,66",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "20 unidades de cemento x 25 kg c/u + base pallet",
+      "price": "$ 128.443,32",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "25 unidades de cemento x 25 kg c/u + base pallet",
+      "price": "$ 155.172,24",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "30 unidades de cemento x 25 kg c/u + base pallet",
+      "price": "$ 181.901,15",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "40 unidades de cemento x 25 kg c/u + base pallet",
+      "price": "$ 235.358,98",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "35 unidades de cemento x 25 kg c/u + base pallet",
+      "price": "$ 208.630,07",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "caltex pcr cemento albañileria 25 kg.",
+      "price": "$ 6.199,35",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "cemento",
+      "title": "plan de ahorro bolsas de cemento 25 kg",
+      "price": "$ 5.345,78",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro alambre 4 mm",
+      "price": "$ 3.791,44",
+      "discount": "-3%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 10 mm",
+      "price": "$ 14.632,03",
+      "discount": "-5%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 6 mm",
+      "price": "$ 5.123,18",
+      "discount": "-2,31%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 12 mm",
+      "price": "$ 20.999,85",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 8 mm (4.80 kg)",
+      "price": "$ 9.221,90",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 16 mm",
+      "price": "$ 35.627,79",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 32 mm (75.72)",
+      "price": "$ 118.374,55",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 10 mm (7.44 kg/barra)",
+      "price": "$ 15.977,57",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 12 mm",
+      "price": "$ 22.950,50",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 8 mm (4.80 kg/barra)",
+      "price": "$ 10.313,07",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 25mm (46.20)",
+      "price": "$ 98.440,32",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro nervurado 20 mm",
+      "price": "$ 55.706,41",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 20mm (29.64)",
+      "price": "$ 63.147,53",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "hierro",
+      "title": "hierro liso 6 mm (2.64 kg/barra)",
+      "price": "$ 5.764,59",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "bolson",
+      "title": "arena en bolson (online)",
+      "price": "$ 30.474,25",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "bolson",
+      "title": "granza en bolson (online)",
+      "price": "$ 31.916,47",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "bolson",
+      "title": "mixto en bolson (online)",
+      "price": "$ 29.321,02",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "bolson",
+      "title": "piedra en bolson",
+      "price": "$ 31.429,82",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "bolson",
+      "title": "arena gruesa en bolson (online)",
+      "price": "$ 32.100,05",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/188 15 x 15 x 6 mm (2.40 x 6.00 metros)",
+      "price": "$ 104.189,34",
+      "discount": "-2,31%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/335 15 x 15 x 8 mm (2.40 x 6.00 metros)",
+      "price": "$ 189.774,33",
+      "discount": "-2,31%",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla r/131 15 x 25 x 5 mm (2.40 x 6.00 mts)",
+      "price": "$ 59.273,91",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/158 15 x 15 x 5.5 x (6mts x 2mts) (30.61 kg)",
+      "price": "$ 110.010,10",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/524 15 x 15 x 10 mm (2.40 x 6.00 metros)",
+      "price": "$ 295.715,79",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/158 15 x 15 cm x 5.5 mm (5 x 2 mts)",
+      "price": "$ 76.954,21",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/109 negra 50 x 50 (1.20 x 3.00 mts)",
+      "price": "$ 26.410,76",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/84 15x15x4 mm (2.00 x 3.00)",
+      "price": "$ 20.240,31",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla r/84 -15 x 25 x 4 mm (2.00 x 6.00 mts)",
+      "price": "$ 43.503,19",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/131 15 x 15 x 5 mm (2.40 x 6.00 mts)",
+      "price": "$ 73.977,65",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "Sagosa",
+      "material": "malla",
+      "title": "malla q/84 15x15x4mm (2.00x6.00)",
+      "price": "$ 53.059,92",
+      "discount": "",
+      "stock": "Sin stock",
+      "date": "09/09/2024"
+    }
+  ],
+  "Mottesi": [],
+  "NeoMat": [
+    {
+      "shop": "NeoMat",
+      "material": "cemento",
+      "title": "cemento pcr 50kg",
+      "price": "$10.467,90",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "cemento",
+      "title": "cemento pcr 25kg",
+      "price": "$5.188,90",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "hierro nervado",
+      "title": "hierro nervado 6mm (2.66)x bar",
+      "price": "$5.480,00",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "hierro nervado",
+      "title": "hierro nervado 10mm(7.40)xbarr",
+      "price": "$14.613,00",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "hierro nervado",
+      "title": "hierro nervado 12mm(10.7)xbar",
+      "price": "$20.945,00",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "hierro nervado",
+      "title": "hierro nervado 8mm(4.74)x barr",
+      "price": "$9.479,00",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "malla",
+      "title": "malla job q109 (2.6mm) 50x50",
+      "price": "$26.552,90",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    },
+    {
+      "shop": "NeoMat",
+      "material": "malla",
+      "title": "malla sima r131(5mm)15x25(2.4)",
+      "price": "$66.260,00",
+      "discount": "",
+      "stock": "",
+      "date": "09/09/2024"
+    }
+  ]
+}
