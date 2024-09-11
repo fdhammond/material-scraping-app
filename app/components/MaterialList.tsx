@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import Chart from './Chart';
 
 type Material = {
   shop: string;
@@ -13,29 +14,23 @@ type Material = {
 async function getMaterialsData(): Promise<Record<string, Material[]>> {
   const filePath = path.join(process.cwd(), 'materials.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(jsonData);
+  const data = JSON.parse(jsonData);
+
+  // Convert prices to numbers`
+  Object.keys(data).forEach(shop => {
+    data[shop].forEach((material: { price: string | number; }) => {
+      material.price = parseFloat(material.price.toString().replace('$', '').replace('.', ''));
+    });
+  });
+
+  return data;
 }
 
 export default async function MaterialList() {
   const materials = await getMaterialsData();
-console.log(materials);
-
   return (
-    <div>
-      <h1>Construction Materials</h1>
-      {Object.entries(materials).map(([shop, materials]) => (
-        <div key={shop}>
-          <h2>{shop}</h2>
-          {materials.map((material, index) => (
-            <div key={index}>
-              <h3>{material.title}</h3>
-              <p>Price: {material.price}</p>
-              <p>Discount: {material.discount}</p>
-              <p>{material.stock ? 'In Stock' : 'Out of Stock'}</p>
-            </div>
-          ))}
-        </div>
-      ))}
+    <div className='w-full h-full justify-center align-middle bg-white'>
+      <Chart materials={materials} />
     </div>
-  );
+  )
 }
