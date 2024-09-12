@@ -1,24 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { kv } from '@vercel/kv';
 import * as cheerio from 'cheerio';
-import fs from 'fs';
-import path from 'path';
-
-type Material = {
-  shop: string;
-  material: string;
-  title: string;
-  price: string;
-  discount: string;
-  stock: string;
-  date: string;
-};
-
-type MaterialsByShop = {
-  [shop: string]: Material[]
-};
 
 // Configuration for URLs and material names
-const MATERIALS_CONFIG: { shop: string; url: string; materialName: string }[] = [
+const MATERIALS_CONFIG = [
   { shop: 'Sagosa', url: 'https://www.sagosa.com.ar/2665-cemento', materialName: 'cemento' },
   { shop: 'Sagosa', url: 'https://www.sagosa.com.ar/2723-hierro', materialName: 'hierro' },
   { shop: 'Sagosa', url: 'https://www.sagosa.com.ar/2646-aridos', materialName: 'bolson' },
@@ -33,7 +17,7 @@ const MATERIALS_CONFIG: { shop: string; url: string; materialName: string }[] = 
 ];
 
 // Fetch HTML from the URL
-const fetchHtml = async (url: string): Promise<string | null> => {
+const fetchHtml = async (url) => {
   try {
     const response = await fetch(url);
     return await response.text();
@@ -44,8 +28,8 @@ const fetchHtml = async (url: string): Promise<string | null> => {
 };
 
 // Extract material data based on the structure of the website
-const extractMaterials = ($: cheerio.CheerioAPI, materialName: string, shop: string): Material[] => {
-  const materialData: Material[] = [];
+const extractMaterials = ($, materialName, shop) => {
+  const materialData = [];
 
   $('.product-title, .item-name').each((index, element) => {
     const title = $(element).text().toLowerCase().trim();
@@ -76,38 +60,34 @@ const extractMaterials = ($: cheerio.CheerioAPI, materialName: string, shop: str
 };
 
 // Write data to JSON file by date
-const writeToJson = async (data: MaterialsByShop, filePath: string): Promise<void> => {
-  let existingData: MaterialsByShop = {};
-
-  // Read existing data from JSON file if it exists
-  if (fs.existsSync(filePath)) {
-    const rawData = fs.readFileSync(filePath, 'utf-8');
-    existingData = JSON.parse(rawData);
-  }
-
-  // Merge new data into the existing data
-  for (const shop in data) {
-    if (existingData[shop]) {
-      // If shop already exists, concatenate the arrays
-      existingData[shop].push(...data[shop]);
-    } else {
-      // If shop does not exist, create a new array for it
-      existingData[shop] = data[shop];
-    }
-  }
-
-  // Write updated data back to the JSON file
-  const jsonData = JSON.stringify(existingData, null, 2);
+const writeToKV = async (data) => {
   try {
-    await fs.writeFileSync(filePath, jsonData);
+    const date = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+    const key = `materials_${date}`;
+
+    // Get existing data for today (if any)
+    const existingData = await kv.get(key) || {};
+
+    // Merge new data into existing data
+    for (const shop in data) {
+      if (existingData[shop]) {
+        existingData[shop].push(...data[shop]);
+      } else {
+        existingData[shop] = data[shop];
+      }
+    }
+
+    // Store updated data in Vercel KV
+    await kv.set(key, existingData);
+    console.log(`Data stored successfully in Vercel KV for ${date}`);
   } catch (error) {
-    console.error(`Error writing JSON file:`, error);
+    console.error(`Error storing data in Vercel KV:`, error);
   }
 };
 
 // Main function to fetch materials and write to files
-const getMaterial = async (): Promise<void> => {
-  const allMaterials: MaterialsByShop = {};
+const getMaterial = async () => {
+  const allMaterials = {};
 
   for (const { shop, url, materialName } of MATERIALS_CONFIG) {
     const html = await fetchHtml(url);
@@ -123,21 +103,24 @@ const getMaterial = async (): Promise<void> => {
     }
   }
 
-  // Define the path for the materials.json file
-  const filePath = path.join(process.cwd(), 'materials.json');
-
   // Write to files
-  await writeToJson(allMaterials, filePath);
+  await writeToKV(allMaterials);
   console.log(`JSON file has been written successfully`);
 };
 
-// API Handler
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+// For App Router
+export async function GET() {
   try {
     await getMaterial();
-    res.status(200).json({ message: 'Scraping executed successfully' });
+    return new Response(JSON.stringify({ message: 'Scraping executed successfully' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
     console.error(`Error during scraping:`, error);
-    res.status(500).json({ error: 'An error occurred during scraping' });
+    return new Response(JSON.stringify({ error: 'An error occurred during scraping' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
